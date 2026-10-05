@@ -126,7 +126,7 @@ function CameraFeed({
         key={`${usingSnapshot ? 'snapshot' : 'mjpeg'}-${annotated}`}
         src={usingSnapshot ? snapshotUrl(camera.id, nonce) : streamUrl(camera.id, annotated, 25)}
         alt={`${camera.name} live feed`}
-        className={className ?? 'h-full w-full object-contain'}
+        className={className ?? 'feed-frame h-full w-full object-contain'}
         onLoad={() => setPainted(true)}
         onError={() => {
           setPainted(false)

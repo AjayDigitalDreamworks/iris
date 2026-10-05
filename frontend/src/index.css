@@ -262,3 +262,55 @@
   box-shadow: 0 0 6px 1px rgba(245, 158, 11, 0.4);
 }
 
+
+/* ── Live feed smoothness ────────────────────────────────────────────────
+   Live camera tiles and their overlays animate gently: no jarring pops
+   when a frame arrives, badges glide, and the queue-camera strip scrolls
+   smoothly on trackpads and touch. */
+.feed-frame {
+  animation: feedFadeIn 420ms ease-out;
+}
+
+@keyframes feedFadeIn {
+  from {
+    opacity: 0.35;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.feed-badge {
+  transition:
+    background-color 220ms ease,
+    color 220ms ease,
+    transform 220ms ease;
+}
+
+.feed-badge:hover {
+  transform: translateY(-1px);
+}
+
+.queue-strip {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+@keyframes livePulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+
+.live-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background-color: #10b981;
+  animation: livePulse 1.6s ease-in-out infinite;
+}

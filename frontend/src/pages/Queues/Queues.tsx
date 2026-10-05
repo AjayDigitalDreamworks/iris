@@ -41,7 +41,9 @@ const SNAPSHOT_MS = 1000
 const DETECTIONS_MS = 2500
 
 function streamUrl(cameraId: string): string {
-  return `${API_BASE}/api/v1/streams/${cameraId}/mjpeg?fps=15&annotated=true`
+  // Persons-only overlay: the queue page cares about people, not products.
+  // The backend draws the live person count banner directly on the frames.
+  return `${API_BASE}/api/v1/streams/${cameraId}/mjpeg?fps=15&annotated=true&layer=persons`
 }
 function snapshotUrl(cameraId: string, nonce: number): string {
   return `${API_BASE}/api/v1/streams/${cameraId}/snapshot.jpg?n=${nonce}`
@@ -114,7 +116,7 @@ function QueueCameraFeed({
             key={`${mode}-${camera.id}`}
             src={mode === 'mjpeg' ? streamUrl(camera.id) : snapshotUrl(camera.id, nonce)}
             alt={`${camera.name} live feed`}
-            className="h-full w-full object-cover"
+            className="feed-frame h-full w-full object-cover"
             onLoad={() => setPainted(true)}
             onError={() => {
               setPainted(false)
@@ -127,11 +129,12 @@ function QueueCameraFeed({
             <span className="text-[10px] font-semibold uppercase">{camera.status}</span>
           </div>
         )}
-        <span className="absolute top-1.5 left-1.5 rounded bg-black/70 px-1.5 py-0.5 text-[9px] font-mono font-semibold text-white backdrop-blur">
+        <span className="feed-badge absolute top-1.5 left-1.5 flex items-center gap-1.5 rounded bg-black/70 px-1.5 py-0.5 text-[9px] font-mono font-semibold text-white backdrop-blur">
+          <span className="live-dot" />
           {mode === 'mjpeg' && feedable ? 'LIVE' : 'STILL'}
         </span>
         {persons !== null && feedable && (
-          <span className="absolute top-1.5 right-1.5 flex items-center gap-1 rounded bg-black/70 px-1.5 py-0.5 text-[9px] font-bold text-white backdrop-blur">
+          <span className="feed-badge absolute top-1.5 right-1.5 flex items-center gap-1 rounded bg-black/70 px-1.5 py-0.5 text-[9px] font-bold text-white backdrop-blur">
             <ScanFace className="h-3 w-3 text-indigo-400" /> {persons} in frame
           </span>
         )}
@@ -287,7 +290,7 @@ export default function Queues() {
             No queue cameras yet — register one with role QUEUE or CHECKOUT
           </div>
         ) : (
-          <div className="custom-scrollbar flex gap-2.5 overflow-x-auto pb-1">
+          <div className="queue-strip custom-scrollbar flex gap-2.5 overflow-x-auto pb-1">
             {queueCameras.map((camera) => (
               <QueueCameraFeed
                 key={camera.id}

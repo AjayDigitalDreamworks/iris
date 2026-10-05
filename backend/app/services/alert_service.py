@@ -314,6 +314,20 @@ class AlertService:
                     payload={"zone_id": zone_id, "status": status},
                 )
             )
+        else:
+            # Downgrade (critical eased back to busy): the critical alert is
+            # superseded by the new busy one, so the operator is not told to
+            # open another counter while the queue is merely busy.
+            outcomes.append(
+                RuleOutcome(
+                    action="resolve",
+                    dedup_key=critical_key,
+                    title=f"Queue critical eased at {zone_name}",
+                    message=f"{zone_name} eased below the critical threshold; the critical alert is superseded by the busy alert.",
+                    reason="superseded_by_busy",
+                    payload={"zone_id": zone_id, "status": status},
+                )
+            )
         return outcomes
 
     def evaluate_camera(
@@ -386,8 +400,13 @@ class AlertService:
             return None
 
         def _write(session) -> Alert | None:
+            # Newest row for the key: after resolve/re-raise cycles several rows
+            # share a dedup_key, and the current generation is the latest one.
             existing = (
-                session.query(Alert).filter(Alert.dedup_key == outcome.dedup_key).first()
+                session.query(Alert)
+                .filter(Alert.dedup_key == outcome.dedup_key)
+                .order_by(Alert.created_at.desc())
+                .first()
             )
             now = datetime.now(tz=timezone.utc)
 
@@ -428,6 +447,26 @@ class AlertService:
                     existing.evidence_path = evidence_path
                 self.refreshed += 1
                 return existing
+
+            # Post-resolve cooldown: an operator resolving (or the system
+            # superseding) an alert does not mean the condition is gone. While
+            # the condition persists, re-raising would rebuild the alert every
+            # frame — the alert-storm failure mode. Keep the condition quiet
+            # until the cooldown expires; after it does, a still-present
+            # condition legitimately re-raises.
+            if (
+                existing is not None
+                and existing.status == AlertStatus.RESOLVED.value
+                and existing.last_observed_at is not None
+                and in_cooldown(
+                    existing.last_observed_at,
+                    int(outcome.payload.get("cooldown_seconds") or cooldown),
+                    now=now,
+                )
+            ):
+                existing.last_observed_at = now
+                self.suppressed += 1
+                return None
 
             alert = Alert(
                 store_id=store_id,

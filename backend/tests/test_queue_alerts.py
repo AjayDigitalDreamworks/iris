@@ -141,7 +141,9 @@ class TestQueueRaise:
     def test_busy_reading_raises_a_warning_alert(self, db_session, scenario):
         outcomes = scenario.evaluate("busy", queue_length=5)
 
-        assert [o.action for o in outcomes] == ["raise"]
+        # The second outcome resolves any lingering critical alert; with none
+        # active it is a safe no-op at apply() time.
+        assert [o.action for o in outcomes] == ["raise", "resolve"]
         outcome = outcomes[0]
         assert outcome.alert_type == AlertType.QUEUE_BUSY.value
         assert outcome.severity == "warning"
@@ -198,6 +200,29 @@ class TestQueueCriticalSupersedesBusy:
         assert critical_row.status == AlertStatus.ACTIVE.value
 
 
+class TestQueueDowngrade:
+    def test_critical_easing_to_busy_resolves_the_critical_alert(self, db_session, scenario):
+        """critical → busy: the OPEN ANOTHER COUNTER alert must clear, not stick."""
+        scenario.raise_and_apply("critical", queue_length=8)
+
+        outcomes = scenario.evaluate("busy", queue_length=5)
+        assert [o.action for o in outcomes] == ["raise", "resolve"]
+        raise_outcome, supersede = outcomes
+        assert raise_outcome.dedup_key == scenario.busy_key
+        assert supersede.dedup_key == scenario.critical_key
+        assert supersede.reason == "superseded_by_busy"
+
+        scenario.apply(raise_outcome)
+        scenario.apply(supersede)
+
+        critical_row = scenario.alert_for(scenario.critical_key, db_session)
+        busy_row = scenario.alert_for(scenario.busy_key, db_session)
+        assert critical_row is not None
+        assert critical_row.status == AlertStatus.RESOLVED.value
+        assert busy_row is not None
+        assert busy_row.status == AlertStatus.ACTIVE.value
+
+
 class TestQueueAutoResolve:
     def test_single_normal_reading_does_not_resolve_yet(self, db_session, scenario):
         scenario.raise_and_apply("critical", queue_length=8)
@@ -237,7 +262,7 @@ class TestQueueAutoResolve:
 
         scenario.evaluate("normal", queue_length=2)  # streak = 1
         busy = scenario.evaluate("busy", queue_length=5)  # streak reset
-        assert [o.action for o in busy] == ["raise"]
+        assert [o.action for o in busy] == ["raise", "resolve"]
 
         outcomes = scenario.evaluate("normal", queue_length=3)  # streak = 1
         assert [o.action for o in outcomes] == ["none"]

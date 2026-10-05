@@ -34,7 +34,11 @@ BOUNDARY = MJPEG_BOUNDARY
 
 
 async def _mjpeg_stream(
-    camera_id: str, fps: float, camera_name: str = "", annotated: bool = True
+    camera_id: str,
+    fps: float,
+    camera_name: str = "",
+    annotated: bool = True,
+    persons_only: bool = False,
 ):
     """Yield multipart MJPEG chunks from the camera's latest-frame buffer."""
     worker = camera_manager.worker(camera_id)
@@ -44,7 +48,9 @@ async def _mjpeg_stream(
     idle_sent = 0
     try:
         while True:
-            frame = await asyncio.to_thread(worker.latest_frame, timeout=0.5, annotated=annotated)
+            frame = await asyncio.to_thread(
+                worker.latest_frame, timeout=0.5, annotated=annotated, persons_only=persons_only
+            )
             if frame is None:
                 idle_sent += 1
                 if idle_sent > 60:
@@ -58,7 +64,7 @@ async def _mjpeg_stream(
                 continue
             idle_sent = 0
             det_count = len(worker.runner.live_detections) if (worker and worker.runner) else 0
-            current_key = (frame.index, det_count if annotated else 0)
+            current_key = (frame.index, det_count if (annotated or persons_only) else 0)
             if current_key != last_frame_key:
                 last_frame_key = current_key
                 jpeg = await asyncio.to_thread(encode_jpeg, frame)
@@ -90,6 +96,7 @@ async def stream_mjpeg(
     _: CurrentUser,
     fps: float = Query(default=25.0, ge=0.5, le=30.0),
     annotated: bool = Query(default=True),
+    layer: str = Query(default="all", pattern="^(all|persons)$"),
 ) -> StreamingResponse:
     # Resolve the camera, then RELEASE the request session before streaming:
     # a long-lived stream must never hold a database connection.
@@ -99,7 +106,13 @@ async def stream_mjpeg(
     name = camera.name
     session.close()
     return StreamingResponse(
-        _mjpeg_stream(camera_id, fps, name, annotated=annotated),
+        _mjpeg_stream(
+            camera_id,
+            fps,
+            name,
+            annotated=annotated,
+            persons_only=(layer == "persons"),
+        ),
         media_type=f"multipart/x-mixed-replace; boundary={BOUNDARY}",
         headers={
             "Cache-Control": "no-store, no-cache, must-revalidate, private",

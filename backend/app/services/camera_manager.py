@@ -273,6 +273,9 @@ class CameraWorker:
         self._offline_alerted = False
         self._was_offline = False
         self._latest_annotated_frame: Frame | None = None
+        # Persons-only overlay (boxes + live count banner) for the Queues page:
+        # product boxes would only clutter a queue camera's view.
+        self._latest_persons_frame: Frame | None = None
         self._latest_analysed_frame: Frame | None = None
 
     # ── lifecycle ───────────────────────────────────────────────────────────
@@ -735,18 +738,41 @@ class CameraWorker:
             return None
 
     # ── streaming ───────────────────────────────────────────────────────────
-    def latest_frame(self, timeout: float = 2.0, annotated: bool = False) -> Frame | None:
-        if annotated and self._latest_annotated_frame is not None:
+    def latest_frame(
+        self, timeout: float = 2.0, annotated: bool = False, persons_only: bool = False
+    ) -> Frame | None:
+        """Newest frame for streaming.
+
+        ``persons_only`` renders only person boxes plus an in-frame count
+        banner — the overlay the Queues page wants, without product clutter.
+        """
+        if persons_only and self._latest_persons_frame is not None:
+            return self._latest_persons_frame
+        if annotated and not persons_only and self._latest_annotated_frame is not None:
             return self._latest_annotated_frame
-        if not annotated and self._latest_analysed_frame is not None:
+        if not annotated and not persons_only and self._latest_analysed_frame is not None:
             return self._latest_analysed_frame
         frame = self.frame_buffer.get_latest(timeout=timeout)
-        if frame is None or not annotated:
+        if frame is None:
             return frame
-        return self._annotate_frame(frame)
+        if persons_only:
+            return self._annotate_frame(frame, layers=("person",), queue_overlay=True)
+        if annotated:
+            return self._annotate_frame(frame)
+        return frame
 
-    def _annotate_frame(self, frame: Frame) -> Frame:
-        """Render active detections, tracks, and labels directly onto a frame copy."""
+    def _annotate_frame(
+        self,
+        frame: Frame,
+        *,
+        layers: tuple[str, ...] | None = None,
+        queue_overlay: bool = False,
+    ) -> Frame:
+        """Render active detections, tracks, and labels directly onto a frame copy.
+
+        ``layers`` filters what is drawn (e.g. ``("person",)``); ``None`` draws
+        everything. ``queue_overlay`` adds a person-count banner in the corner.
+        """
         runner = self.runner
         if runner is None or not runner.live_detections:
             return frame
@@ -754,8 +780,16 @@ class CameraWorker:
         annotated_img = frame.image.copy()
         h, w = annotated_img.shape[:2]
 
+        person_count = 0
         for det in runner.live_detections:
             try:
+                is_person = bool(det.get("is_person", False))
+                is_multipack = bool(det.get("is_multipack", False))
+                if layers is not None and ("person" if is_person else "product") not in layers:
+                    continue
+                if is_person:
+                    person_count += 1
+
                 x1 = max(0, min(w - 1, int(round(float(det.get("x1", 0))))))
                 y1 = max(0, min(h - 1, int(round(float(det.get("y1", 0))))))
                 x2 = max(0, min(w - 1, int(round(float(det.get("x2", 0))))))
@@ -766,8 +800,6 @@ class CameraWorker:
                 conf = float(det.get("confidence", 0.0))
                 label = str(det.get("sku") or det.get("class_name") or "object")
                 track_id = det.get("track_id")
-                is_person = bool(det.get("is_person", False))
-                is_multipack = bool(det.get("is_multipack", False))
 
                 if is_person:
                     box_color = (21, 204, 250)      # Yellow/Gold (#FACC15 BGR)
@@ -816,6 +848,29 @@ class CameraWorker:
                     cv2.circle(annotated_img, (cx, cy), 3, box_color, -1)
             except Exception:
                 continue
+
+        if queue_overlay and layers == ("person",):
+            # Queues page banner: the number that matters, at a glance.
+            banner_text = f"PEOPLE IN FRAME: {person_count}"
+            font = cv2.FONT_HERSHEY_SIMPLEX
+            scale = 0.55
+            thickness = 1
+            (tw, th), _ = cv2.getTextSize(banner_text, font, scale, thickness)
+            pad = 8
+            bx1, by1 = 10, h - th - 2 * pad - 10
+            bx2, by2 = 10 + tw + 2 * pad, h - 10
+            cv2.rectangle(annotated_img, (bx1, by1), (bx2, by2), (30, 30, 30), -1)
+            cv2.rectangle(annotated_img, (bx1, by1), (bx2, by2), (21, 204, 250), 1)
+            cv2.putText(
+                annotated_img,
+                banner_text,
+                (bx1 + pad, by2 - pad - 2),
+                font,
+                scale,
+                (21, 204, 250),
+                thickness,
+                cv2.LINE_AA,
+            )
 
         return Frame(
             image=annotated_img,
@@ -1007,6 +1062,14 @@ class CameraManager:
         for minutes.
         """
         self.stop(camera_id)
+        worker = self.worker(camera_id)
+        # stop() only joins for a few seconds; the old thread can still be
+        # winding down (mid-frame read, mid-persist). start() rejects a worker
+        # whose thread is alive, which used to leave the camera permanently
+        # offline after a restart. Wait until it is actually gone.
+        deadline = time.time() + 10.0
+        while worker.thread is not None and worker.thread.is_alive() and time.time() < deadline:
+            time.sleep(0.1)
         return self.start(camera_id)
 
     def start_all(self, store_id: str | None = None) -> int:

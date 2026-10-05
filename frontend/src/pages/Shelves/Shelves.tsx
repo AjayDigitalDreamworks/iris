@@ -227,7 +227,7 @@ export default function Shelves() {
                         </div>
                       </div>
 
-                      <div className="mt-2.5 grid grid-cols-3 gap-1.5 text-center text-[10px]">
+                      <div className="mt-2.5 grid grid-cols-4 gap-1.5 text-center text-[10px]">
                         <div className="rounded border border-zinc-200/50 bg-zinc-50/50 p-1.5 dark:border-white/5 dark:bg-zinc-800/30">
                           <span className="text-zinc-400">Stock %</span>
                           <p className="mt-0.5 font-mono font-semibold text-zinc-700 dark:text-zinc-300">
@@ -244,6 +244,21 @@ export default function Shelves() {
                           <span className="text-zinc-400">SKUs</span>
                           <p className="mt-0.5 font-mono font-semibold text-amber-600 dark:text-amber-400">
                             {row.detected_skus ?? '—'}
+                          </p>
+                        </div>
+                        <div className="rounded border border-zinc-200/50 bg-zinc-50/50 p-1.5 dark:border-white/5 dark:bg-zinc-800/30">
+                          <span className="text-zinc-400">Empty Slots</span>
+                          <p
+                            className={`mt-0.5 font-mono font-semibold ${
+                              (row.empty_positions ?? 0) > 0
+                                ? 'text-rose-600 dark:text-rose-400'
+                                : 'text-zinc-700 dark:text-zinc-300'
+                            }`}
+                          >
+                            {row.empty_positions ??
+                              (row.capacity_units && row.estimated_quantity != null
+                                ? Math.max(0, row.capacity_units - row.estimated_quantity)
+                                : '—')}
                           </p>
                         </div>
                       </div>
