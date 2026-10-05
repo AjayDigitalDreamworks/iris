@@ -1,0 +1,36 @@
+# IRIS Retail Shelf Product Detector Configuration
+# Dataset location and class definitions matching datasets/manifests/classes.yaml
+
+path: c:/iris/datasets/detection
+train: images/train
+val: images/val
+test: images/test
+
+nc: 11
+
+names:
+  0: coca_cola_can
+  1: pepsi_can
+  2: red_bull_can
+  3: heineken_bottle
+  4: water_bottle
+  5: lays_chips
+  6: pringles_can
+  7: heinz_ketchup
+  8: hellmanns_mayo
+  9: kelloggs_cereal
+  10: tuna_can
+
+skus:
+  0: SKU-BEV-COCA-COLA-CAN-330ML
+  1: SKU-BEV-PEPSI-CAN-330ML
+  2: SKU-BEV-RED-BULL-CAN-250ML
+  3: SKU-BEV-HEINEKEN-BOTTLE-330ML
+  4: SKU-BEV-EVIAN-WATER-500ML
+  5: SKU-SNACK-LAYS-CHIPS-150G
+  6: SKU-SNACK-PRINGLES-CAN-165G
+  7: SKU-COND-HEINZ-KETCHUP-500G
+  8: SKU-COND-HELLMANNS-MAYO-400G
+  9: SKU-CEREAL-KELLOGGS-BOX-375G
+  10: SKU-CANNED-TUNA-CHUNK-185G
+

@@ -1,0 +1,42 @@
+# IRIS backend runtime dependencies.
+#
+# Pinned to the versions this project was built and verified against.
+# Install with:
+#     python -m pip install -r backend/requirements.txt
+
+# ── web / API ───────────────────────────────────────────────────────────────
+fastapi==0.141.1
+uvicorn[standard]==0.52.4
+python-multipart==0.0.32
+websockets==17.1
+pydantic==2.13.5
+email-validator==2.3.0
+python-dotenv==1.2.3
+
+# ── persistence ─────────────────────────────────────────────────────────────
+SQLAlchemy==2.0.52
+alembic==1.19.2
+
+# ── auth ────────────────────────────────────────────────────────────────────
+PyJWT==2.15.1
+bcrypt==5.0.0
+
+# ── vision / inference ──────────────────────────────────────────────────────
+# torch is CPU-only here; install the CUDA build from the PyTorch index if a
+# GPU is available (see docs/AI_MODELS.md).
+torch==2.14.0
+ultralytics==8.4.166
+onnxruntime==1.29.0
+opencv-python>=4.8
+numpy==2.5.2
+pillow==12.3.0
+
+# ── web-video camera sources (YouTube / Vimeo links) ────────────────────────
+# Optional at runtime: a camera whose source is a watch-page link needs this to
+# resolve it to a direct media URL. Without it those cameras fail with an
+# explicit, actionable error rather than silently.
+yt-dlp==2026.8.19
+
+# ── diagnostics ─────────────────────────────────────────────────────────────
+psutil==7.2.2
+httpx==0.28.1

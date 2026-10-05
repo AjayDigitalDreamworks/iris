@@ -1,0 +1,264 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg-canvas: #f0f4f9;
+  --bg-surface: #ffffff;
+  --bg-surface-elevated: #ffffff;
+  --border-hairline: #e2e8f0;
+  --border-specular: rgba(255, 255, 255, 0.95);
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  --accent-primary: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-soft: rgba(37, 99, 235, 0.08);
+  --shadow-card: 0 4px 20px -2px rgba(15, 30, 65, 0.05), 0 2px 8px -1px rgba(15, 30, 65, 0.03);
+  --shadow-specular: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
+}
+
+.dark {
+  --bg-canvas: #090d16;
+  --bg-surface: #101726;
+  --bg-surface-elevated: #151e32;
+  --border-hairline: rgba(255, 255, 255, 0.08);
+  --border-specular: rgba(255, 255, 255, 0.12);
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --accent-primary: #3b82f6;
+  --accent-hover: #60a5fa;
+  --accent-soft: rgba(59, 130, 246, 0.15);
+  --shadow-card: 0 4px 24px -2px rgba(0, 0, 0, 0.5), 0 2px 8px -2px rgba(0, 0, 0, 0.4);
+  --shadow-specular: inset 0 1px 0 0 rgba(255, 255, 255, 0.1), 0 4px 12px -2px rgba(0, 0, 0, 0.5);
+}
+
+@layer base {
+  html, body, #root {
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+  }
+
+  body {
+    margin: 0;
+    font-family: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+  }
+
+  /* Universal tabular numerals for all telemetry, numbers, and stats */
+  .tabular-nums,
+  [data-tabular="true"] {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
+  }
+}
+
+/* Precision Surface Card Styles */
+.surface-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-hairline);
+  box-shadow: var(--shadow-card);
+  transition: transform 150ms cubic-bezier(0.2, 0, 0, 1),
+              box-shadow 150ms cubic-bezier(0.2, 0, 0, 1),
+              border-color 150ms ease;
+}
+
+.surface-specular {
+  border-top: 1px solid var(--border-specular);
+  box-shadow: var(--shadow-specular);
+}
+
+.surface-interactive {
+  transition: transform 150ms cubic-bezier(0.2, 0, 0, 1),
+              box-shadow 150ms cubic-bezier(0.2, 0, 0, 1),
+              border-color 150ms ease;
+}
+
+.surface-interactive:hover {
+  transform: translateY(-2px);
+  border-color: rgba(99, 102, 241, 0.35);
+  box-shadow: 0 6px 14px -2px rgba(0, 0, 0, 0.4), 0 0 12px rgba(99, 102, 241, 0.12);
+}
+
+/* Minimalist Inputs */
+.precision-input {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--border-hairline);
+  color: var(--text-primary);
+  transition: all 120ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+.precision-input:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.15);
+}
+
+.dark .precision-input {
+  background: rgba(18, 18, 22, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ededed;
+}
+
+.dark .precision-input:focus {
+  outline: none;
+  background: rgba(24, 24, 28, 0.95);
+  border-color: rgba(99, 102, 241, 0.7);
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.25);
+}
+
+/* Custom Minimalist Thin Scrollbar */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(113, 113, 122, 0.3) transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(113, 113, 122, 0.3);
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(113, 113, 122, 0.5);
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* Shimmer Loading Wave */
+@keyframes shimmerWave {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.animate-shimmer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0,
+    rgba(255, 255, 255, 0.05) 30%,
+    rgba(255, 255, 255, 0.12) 60%,
+    rgba(255, 255, 255, 0)
+  );
+  animation: shimmerWave 1.6s infinite cubic-bezier(0.2, 0, 0, 1);
+}
+
+/* Professional Enterprise Card with corner indicators */
+.retail-card {
+  position: relative;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-hairline);
+  box-shadow: var(--shadow-card);
+  border-radius: 0.75rem;
+}
+
+.retail-card-bracket {
+  position: relative;
+}
+
+.retail-card-bracket::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 6px;
+  height: 6px;
+  border-top: 1.5px solid rgba(148, 163, 184, 0.35);
+  border-left: 1.5px solid rgba(148, 163, 184, 0.35);
+  border-top-left-radius: 2px;
+  pointer-events: none;
+}
+
+.retail-card-bracket::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 6px;
+  height: 6px;
+  border-bottom: 1.5px solid rgba(148, 163, 184, 0.35);
+  border-right: 1.5px solid rgba(148, 163, 184, 0.35);
+  border-bottom-right-radius: 2px;
+  pointer-events: none;
+}
+
+/* Floorplan Heatmap Overlay */
+.heatmap-blur {
+  filter: blur(14px);
+  mix-blend-mode: multiply;
+}
+
+.dark .heatmap-blur {
+  filter: blur(14px);
+  mix-blend-mode: screen;
+}
+
+/* Architectural CAD blueprint background */
+.cad-grid {
+  background-image: 
+    radial-gradient(circle, rgba(148, 163, 184, 0.18) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.dark .cad-grid {
+  background-image: 
+    radial-gradient(circle, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* Hardware LED status dots */
+.led-dot {
+  position: relative;
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 9999px;
+}
+
+.led-dot-emerald {
+  background-color: #10b981;
+  box-shadow: 0 0 6px 1px rgba(16, 185, 129, 0.4);
+}
+
+.led-dot-blue {
+  background-color: #3b82f6;
+  box-shadow: 0 0 6px 1px rgba(59, 130, 246, 0.4);
+}
+
+.led-dot-amber {
+  background-color: #f59e0b;
+  box-shadow: 0 0 6px 1px rgba(245, 158, 11, 0.4);
+}
+

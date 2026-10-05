@@ -1,0 +1,927 @@
+{
+  "C1_P01_N1_S2_1_JPG.rf.1a99afbc69052ee5b96e3454d3714a41.jpg": {
+    "image_id": 1001,
+    "filename": "C1_P01_N1_S2_1_JPG.rf.1a99afbc69052ee5b96e3454d3714a41.jpg",
+    "split": "train",
+    "session_id": "C1",
+    "shelf_id": "P01",
+    "width": 640,
+    "height": 640,
+    "total_units": 10,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 10
+    },
+    "shelf_capacity": 18,
+    "empty_positions": 8,
+    "stock_percentage": 55.6,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P01_N1_S2_1_JPG.rf.20f7549cb63720295b543b2c18454ff3.jpg": {
+    "image_id": 2001,
+    "filename": "C1_P01_N1_S2_1_JPG.rf.20f7549cb63720295b543b2c18454ff3.jpg",
+    "split": "train",
+    "session_id": "C1",
+    "shelf_id": "P01",
+    "width": 640,
+    "height": 640,
+    "total_units": 10,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 10
+    },
+    "shelf_capacity": 18,
+    "empty_positions": 8,
+    "stock_percentage": 55.6,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P01_N1_S3_1_JPG.rf.020e939dccb7c0ddd54eeee580fea4b4.jpg": {
+    "image_id": 3001,
+    "filename": "C1_P01_N1_S3_1_JPG.rf.020e939dccb7c0ddd54eeee580fea4b4.jpg",
+    "split": "train",
+    "session_id": "C1",
+    "shelf_id": "P01",
+    "width": 640,
+    "height": 640,
+    "total_units": 15,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 13,
+      "SKU-BEV-PEPSI-CAN-330ML": 2
+    },
+    "shelf_capacity": 19,
+    "empty_positions": 4,
+    "stock_percentage": 78.9,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P01_N1_S3_1_JPG.rf.32986c9828f9aa180100a1ad924d9cce.jpg": {
+    "image_id": 4001,
+    "filename": "C1_P01_N1_S3_1_JPG.rf.32986c9828f9aa180100a1ad924d9cce.jpg",
+    "split": "train",
+    "session_id": "C1",
+    "shelf_id": "P01",
+    "width": 640,
+    "height": 640,
+    "total_units": 15,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 13,
+      "SKU-BEV-PEPSI-CAN-330ML": 2
+    },
+    "shelf_capacity": 19,
+    "empty_positions": 4,
+    "stock_percentage": 78.9,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P01_N1_S5_1_JPG.rf.32320d75f1027136f6cffdcb5b9f6289.jpg": {
+    "image_id": 5001,
+    "filename": "C1_P01_N1_S5_1_JPG.rf.32320d75f1027136f6cffdcb5b9f6289.jpg",
+    "split": "train",
+    "session_id": "C1",
+    "shelf_id": "P01",
+    "width": 640,
+    "height": 640,
+    "total_units": 25,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 20,
+      "SKU-BEV-PEPSI-CAN-330ML": 2,
+      "SKU-SNACK-LAYS-CHIPS-150G": 3
+    },
+    "shelf_capacity": 29,
+    "empty_positions": 4,
+    "stock_percentage": 86.2,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P01_N1_S5_1_JPG.rf.af8c3e732efd97ac5a35ca94826e8736.jpg": {
+    "image_id": 6001,
+    "filename": "C1_P01_N1_S5_1_JPG.rf.af8c3e732efd97ac5a35ca94826e8736.jpg",
+    "split": "train",
+    "session_id": "C1",
+    "shelf_id": "P01",
+    "width": 640,
+    "height": 640,
+    "total_units": 25,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 20,
+      "SKU-BEV-PEPSI-CAN-330ML": 2,
+      "SKU-SNACK-LAYS-CHIPS-150G": 3
+    },
+    "shelf_capacity": 29,
+    "empty_positions": 4,
+    "stock_percentage": 86.2,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P01_N2_S4_1_JPG.rf.5f3315db4791ed627f495f34c83d9f04.jpg": {
+    "image_id": 7001,
+    "filename": "C1_P01_N2_S4_1_JPG.rf.5f3315db4791ed627f495f34c83d9f04.jpg",
+    "split": "train",
+    "session_id": "C1",
+    "shelf_id": "P01",
+    "width": 640,
+    "height": 640,
+    "total_units": 20,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 15,
+      "SKU-BEV-PEPSI-CAN-330ML": 2,
+      "SKU-SNACK-LAYS-CHIPS-150G": 3
+    },
+    "shelf_capacity": 24,
+    "empty_positions": 4,
+    "stock_percentage": 83.3,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P01_N2_S4_1_JPG.rf.e1368baa5a6e8b54ffb7ca69ad65db6d.jpg": {
+    "image_id": 8001,
+    "filename": "C1_P01_N2_S4_1_JPG.rf.e1368baa5a6e8b54ffb7ca69ad65db6d.jpg",
+    "split": "train",
+    "session_id": "C1",
+    "shelf_id": "P01",
+    "width": 640,
+    "height": 640,
+    "total_units": 20,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 15,
+      "SKU-BEV-PEPSI-CAN-330ML": 2,
+      "SKU-SNACK-LAYS-CHIPS-150G": 3
+    },
+    "shelf_capacity": 24,
+    "empty_positions": 4,
+    "stock_percentage": 83.3,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P01_N3_S2_1_JPG.rf.a78cf7d404d3f922e6476c534c448957.jpg": {
+    "image_id": 9001,
+    "filename": "C1_P01_N3_S2_1_JPG.rf.a78cf7d404d3f922e6476c534c448957.jpg",
+    "split": "train",
+    "session_id": "C1",
+    "shelf_id": "P01",
+    "width": 640,
+    "height": 640,
+    "total_units": 10,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 5,
+      "SKU-BEV-PEPSI-CAN-330ML": 2,
+      "SKU-SNACK-LAYS-CHIPS-150G": 3
+    },
+    "shelf_capacity": 18,
+    "empty_positions": 8,
+    "stock_percentage": 55.6,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P01_N3_S2_1_JPG.rf.b458bd0d5438e1f3ba9e2986c1bedbe3.jpg": {
+    "image_id": 10001,
+    "filename": "C1_P01_N3_S2_1_JPG.rf.b458bd0d5438e1f3ba9e2986c1bedbe3.jpg",
+    "split": "train",
+    "session_id": "C1",
+    "shelf_id": "P01",
+    "width": 640,
+    "height": 640,
+    "total_units": 10,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 5,
+      "SKU-BEV-PEPSI-CAN-330ML": 2,
+      "SKU-SNACK-LAYS-CHIPS-150G": 3
+    },
+    "shelf_capacity": 18,
+    "empty_positions": 8,
+    "stock_percentage": 55.6,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P01_N3_S3_1_JPG.rf.198ae9007ff64e6e2f3f80ef486ac100.jpg": {
+    "image_id": 11001,
+    "filename": "C1_P01_N3_S3_1_JPG.rf.198ae9007ff64e6e2f3f80ef486ac100.jpg",
+    "split": "train",
+    "session_id": "C1",
+    "shelf_id": "P01",
+    "width": 640,
+    "height": 640,
+    "total_units": 15,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 10,
+      "SKU-BEV-PEPSI-CAN-330ML": 2,
+      "SKU-SNACK-LAYS-CHIPS-150G": 3
+    },
+    "shelf_capacity": 19,
+    "empty_positions": 4,
+    "stock_percentage": 78.9,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P01_N3_S3_1_JPG.rf.cac18afc034f8779315497c9f3a10569.jpg": {
+    "image_id": 12001,
+    "filename": "C1_P01_N3_S3_1_JPG.rf.cac18afc034f8779315497c9f3a10569.jpg",
+    "split": "train",
+    "session_id": "C1",
+    "shelf_id": "P01",
+    "width": 640,
+    "height": 640,
+    "total_units": 15,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 10,
+      "SKU-BEV-PEPSI-CAN-330ML": 2,
+      "SKU-SNACK-LAYS-CHIPS-150G": 3
+    },
+    "shelf_capacity": 19,
+    "empty_positions": 4,
+    "stock_percentage": 78.9,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P01_N4_S2_1_JPG.rf.22e914aee5e481b0e68e7b4ecdab0906.jpg": {
+    "image_id": 13001,
+    "filename": "C1_P01_N4_S2_1_JPG.rf.22e914aee5e481b0e68e7b4ecdab0906.jpg",
+    "split": "train",
+    "session_id": "C1",
+    "shelf_id": "P01",
+    "width": 640,
+    "height": 640,
+    "total_units": 10,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 7,
+      "SKU-SNACK-LAYS-CHIPS-150G": 3
+    },
+    "shelf_capacity": 18,
+    "empty_positions": 8,
+    "stock_percentage": 55.6,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P01_N4_S2_1_JPG.rf.960e60f42c04b4cf5e1321f4dcf7a3fa.jpg": {
+    "image_id": 14001,
+    "filename": "C1_P01_N4_S2_1_JPG.rf.960e60f42c04b4cf5e1321f4dcf7a3fa.jpg",
+    "split": "train",
+    "session_id": "C1",
+    "shelf_id": "P01",
+    "width": 640,
+    "height": 640,
+    "total_units": 10,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 7,
+      "SKU-SNACK-LAYS-CHIPS-150G": 3
+    },
+    "shelf_capacity": 18,
+    "empty_positions": 8,
+    "stock_percentage": 55.6,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P02_N1_S2_1_JPG.rf.4b369b3289d7163eaa4d2895d272f709.jpg": {
+    "image_id": 15001,
+    "filename": "C1_P02_N1_S2_1_JPG.rf.4b369b3289d7163eaa4d2895d272f709.jpg",
+    "split": "train",
+    "session_id": "C1",
+    "shelf_id": "P02",
+    "width": 640,
+    "height": 640,
+    "total_units": 18,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 18
+    },
+    "shelf_capacity": 22,
+    "empty_positions": 4,
+    "stock_percentage": 81.8,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P02_N1_S2_1_JPG.rf.fff29a39432d473262006ee50f67df22.jpg": {
+    "image_id": 16001,
+    "filename": "C1_P02_N1_S2_1_JPG.rf.fff29a39432d473262006ee50f67df22.jpg",
+    "split": "train",
+    "session_id": "C1",
+    "shelf_id": "P02",
+    "width": 640,
+    "height": 640,
+    "total_units": 18,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 18
+    },
+    "shelf_capacity": 22,
+    "empty_positions": 4,
+    "stock_percentage": 81.8,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P02_N1_S3_1_JPG.rf.2bad7b3b7cc750258bdc270f03afacaf.jpg": {
+    "image_id": 17001,
+    "filename": "C1_P02_N1_S3_1_JPG.rf.2bad7b3b7cc750258bdc270f03afacaf.jpg",
+    "split": "train",
+    "session_id": "C1",
+    "shelf_id": "P02",
+    "width": 640,
+    "height": 640,
+    "total_units": 28,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 28
+    },
+    "shelf_capacity": 32,
+    "empty_positions": 4,
+    "stock_percentage": 87.5,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P02_N1_S3_1_JPG.rf.ae861b6c9124832bdec965c443020d93.jpg": {
+    "image_id": 18001,
+    "filename": "C1_P02_N1_S3_1_JPG.rf.ae861b6c9124832bdec965c443020d93.jpg",
+    "split": "train",
+    "session_id": "C1",
+    "shelf_id": "P02",
+    "width": 640,
+    "height": 640,
+    "total_units": 28,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 28
+    },
+    "shelf_capacity": 32,
+    "empty_positions": 4,
+    "stock_percentage": 87.5,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P02_N1_S4_1_JPG.rf.84bae8274c2c722127aabc800f21911b.jpg": {
+    "image_id": 19001,
+    "filename": "C1_P02_N1_S4_1_JPG.rf.84bae8274c2c722127aabc800f21911b.jpg",
+    "split": "train",
+    "session_id": "C1",
+    "shelf_id": "P02",
+    "width": 640,
+    "height": 640,
+    "total_units": 37,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 37
+    },
+    "shelf_capacity": 41,
+    "empty_positions": 4,
+    "stock_percentage": 90.2,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P02_N1_S4_1_JPG.rf.c454f77b099eb32ac94154e95ea43b56.jpg": {
+    "image_id": 20001,
+    "filename": "C1_P02_N1_S4_1_JPG.rf.c454f77b099eb32ac94154e95ea43b56.jpg",
+    "split": "train",
+    "session_id": "C1",
+    "shelf_id": "P02",
+    "width": 640,
+    "height": 640,
+    "total_units": 37,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 37
+    },
+    "shelf_capacity": 41,
+    "empty_positions": 4,
+    "stock_percentage": 90.2,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P02_N1_S5_1_JPG.rf.1c56448484beeb9f2cd79f0dceef5ffa.jpg": {
+    "image_id": 21001,
+    "filename": "C1_P02_N1_S5_1_JPG.rf.1c56448484beeb9f2cd79f0dceef5ffa.jpg",
+    "split": "train",
+    "session_id": "C1",
+    "shelf_id": "P02",
+    "width": 640,
+    "height": 640,
+    "total_units": 46,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 46
+    },
+    "shelf_capacity": 50,
+    "empty_positions": 4,
+    "stock_percentage": 92.0,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P02_N1_S5_1_JPG.rf.ebdfa480920027e8ed760bb560ca5dfb.jpg": {
+    "image_id": 22001,
+    "filename": "C1_P02_N1_S5_1_JPG.rf.ebdfa480920027e8ed760bb560ca5dfb.jpg",
+    "split": "train",
+    "session_id": "C1",
+    "shelf_id": "P02",
+    "width": 640,
+    "height": 640,
+    "total_units": 46,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 46
+    },
+    "shelf_capacity": 50,
+    "empty_positions": 4,
+    "stock_percentage": 92.0,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P02_N2_S2_1_JPG.rf.ece3d36f72d0c30775e3318146851eb6.jpg": {
+    "image_id": 23001,
+    "filename": "C1_P02_N2_S2_1_JPG.rf.ece3d36f72d0c30775e3318146851eb6.jpg",
+    "split": "train",
+    "session_id": "C1",
+    "shelf_id": "P02",
+    "width": 640,
+    "height": 640,
+    "total_units": 20,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 20
+    },
+    "shelf_capacity": 24,
+    "empty_positions": 4,
+    "stock_percentage": 83.3,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P02_N2_S2_1_JPG.rf.f6420e158fd5348a18911f74bdb36643.jpg": {
+    "image_id": 24001,
+    "filename": "C1_P02_N2_S2_1_JPG.rf.f6420e158fd5348a18911f74bdb36643.jpg",
+    "split": "train",
+    "session_id": "C1",
+    "shelf_id": "P02",
+    "width": 640,
+    "height": 640,
+    "total_units": 20,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 20
+    },
+    "shelf_capacity": 24,
+    "empty_positions": 4,
+    "stock_percentage": 83.3,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P01_N1_S2_2_JPG.rf.bd909a5639e5e082f7dd9f1f6b8ce2d5.jpg": {
+    "image_id": 1002,
+    "filename": "C1_P01_N1_S2_2_JPG.rf.bd909a5639e5e082f7dd9f1f6b8ce2d5.jpg",
+    "split": "val",
+    "session_id": "C1",
+    "shelf_id": "P01",
+    "width": 640,
+    "height": 640,
+    "total_units": 10,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 10
+    },
+    "shelf_capacity": 18,
+    "empty_positions": 8,
+    "stock_percentage": 55.6,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P04_N1_S5_1_JPG.rf.9e9d428c564e6b914b0d6d852e63071c.jpg": {
+    "image_id": 2002,
+    "filename": "C1_P04_N1_S5_1_JPG.rf.9e9d428c564e6b914b0d6d852e63071c.jpg",
+    "split": "val",
+    "session_id": "C1",
+    "shelf_id": "P04",
+    "width": 640,
+    "height": 640,
+    "total_units": 77,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 65,
+      "SKU-BEV-PEPSI-CAN-330ML": 5,
+      "SKU-SNACK-LAYS-CHIPS-150G": 4,
+      "SKU-BEV-RED-BULL-CAN-250ML": 3
+    },
+    "shelf_capacity": 81,
+    "empty_positions": 4,
+    "stock_percentage": 95.1,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P04_N2_S4_1_JPG.rf.ff55ac015a25c27f777845998b02fa77.jpg": {
+    "image_id": 3002,
+    "filename": "C1_P04_N2_S4_1_JPG.rf.ff55ac015a25c27f777845998b02fa77.jpg",
+    "split": "val",
+    "session_id": "C1",
+    "shelf_id": "P04",
+    "width": 640,
+    "height": 640,
+    "total_units": 64,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 55,
+      "SKU-BEV-PEPSI-CAN-330ML": 5,
+      "SKU-SNACK-LAYS-CHIPS-150G": 4
+    },
+    "shelf_capacity": 68,
+    "empty_positions": 4,
+    "stock_percentage": 94.1,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P05_N3_S4_1_JPG.rf.9667b527a2b9d443c0b9bceaebec074a.jpg": {
+    "image_id": 4002,
+    "filename": "C1_P05_N3_S4_1_JPG.rf.9667b527a2b9d443c0b9bceaebec074a.jpg",
+    "split": "val",
+    "session_id": "C1",
+    "shelf_id": "P05",
+    "width": 640,
+    "height": 640,
+    "total_units": 48,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 36,
+      "SKU-BEV-PEPSI-CAN-330ML": 6,
+      "SKU-SNACK-LAYS-CHIPS-150G": 6
+    },
+    "shelf_capacity": 52,
+    "empty_positions": 4,
+    "stock_percentage": 92.3,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P07_N1_S3_1_JPG.rf.8e974a9a959b9f2f68352c770db9a234.jpg": {
+    "image_id": 5002,
+    "filename": "C1_P07_N1_S3_1_JPG.rf.8e974a9a959b9f2f68352c770db9a234.jpg",
+    "split": "val",
+    "session_id": "C1",
+    "shelf_id": "P07",
+    "width": 640,
+    "height": 640,
+    "total_units": 30,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 19,
+      "SKU-BEV-HEINEKEN-BOTTLE-330ML": 11
+    },
+    "shelf_capacity": 34,
+    "empty_positions": 4,
+    "stock_percentage": 88.2,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P08_N4_S3_1_JPG.rf.6769c4aacec29b3913cae489a19baf97.jpg": {
+    "image_id": 6002,
+    "filename": "C1_P08_N4_S3_1_JPG.rf.6769c4aacec29b3913cae489a19baf97.jpg",
+    "split": "val",
+    "session_id": "C1",
+    "shelf_id": "P08",
+    "width": 640,
+    "height": 640,
+    "total_units": 42,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 32,
+      "SKU-BEV-PEPSI-CAN-330ML": 3,
+      "SKU-COND-HEINZ-KETCHUP-500G": 7
+    },
+    "shelf_capacity": 46,
+    "empty_positions": 4,
+    "stock_percentage": 91.3,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P10_N3_S3_1_JPG.rf.dbb3993e52eb241458448e135f417f72.jpg": {
+    "image_id": 7002,
+    "filename": "C1_P10_N3_S3_1_JPG.rf.dbb3993e52eb241458448e135f417f72.jpg",
+    "split": "val",
+    "session_id": "C1",
+    "shelf_id": "P10",
+    "width": 640,
+    "height": 640,
+    "total_units": 31,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 21,
+      "SKU-BEV-HEINEKEN-BOTTLE-330ML": 10
+    },
+    "shelf_capacity": 35,
+    "empty_positions": 4,
+    "stock_percentage": 88.6,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C2_P01_N2_S3_2_JPG.rf.789dfc6795af0ae420b9d2f8d1882589.jpg": {
+    "image_id": 8002,
+    "filename": "C2_P01_N2_S3_2_JPG.rf.789dfc6795af0ae420b9d2f8d1882589.jpg",
+    "split": "val",
+    "session_id": "C2",
+    "shelf_id": "P01",
+    "width": 640,
+    "height": 640,
+    "total_units": 45,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 41,
+      "SKU-COND-HELLMANNS-MAYO-400G": 4
+    },
+    "shelf_capacity": 49,
+    "empty_positions": 4,
+    "stock_percentage": 91.8,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C2_P02_N1_S3_1_JPG.rf.1dc69fe9867842db6c61c2ab8ac36ada.jpg": {
+    "image_id": 9002,
+    "filename": "C2_P02_N1_S3_1_JPG.rf.1dc69fe9867842db6c61c2ab8ac36ada.jpg",
+    "split": "val",
+    "session_id": "C2",
+    "shelf_id": "P02",
+    "width": 640,
+    "height": 640,
+    "total_units": 36,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 27,
+      "SKU-BEV-HEINEKEN-BOTTLE-330ML": 6,
+      "SKU-SNACK-PRINGLES-CAN-165G": 1,
+      "SKU-CEREAL-KELLOGGS-BOX-375G": 2
+    },
+    "shelf_capacity": 40,
+    "empty_positions": 4,
+    "stock_percentage": 90.0,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C2_P04_N2_S3_1_JPG.rf.7b94917b86a79b424354f45bc41f2dce.jpg": {
+    "image_id": 10002,
+    "filename": "C2_P04_N2_S3_1_JPG.rf.7b94917b86a79b424354f45bc41f2dce.jpg",
+    "split": "val",
+    "session_id": "C2",
+    "shelf_id": "P04",
+    "width": 640,
+    "height": 640,
+    "total_units": 42,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 29,
+      "SKU-BEV-PEPSI-CAN-330ML": 4,
+      "SKU-SNACK-LAYS-CHIPS-150G": 9
+    },
+    "shelf_capacity": 46,
+    "empty_positions": 4,
+    "stock_percentage": 91.3,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C2_P05_N1_S5_1_JPG.rf.2d9ef06d80693e281171334bef6fe584.jpg": {
+    "image_id": 11002,
+    "filename": "C2_P05_N1_S5_1_JPG.rf.2d9ef06d80693e281171334bef6fe584.jpg",
+    "split": "val",
+    "session_id": "C2",
+    "shelf_id": "P05",
+    "width": 640,
+    "height": 640,
+    "total_units": 59,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 44,
+      "SKU-BEV-HEINEKEN-BOTTLE-330ML": 11,
+      "SKU-SNACK-PRINGLES-CAN-165G": 1,
+      "SKU-CEREAL-KELLOGGS-BOX-375G": 2,
+      "SKU-CANNED-TUNA-CHUNK-185G": 1
+    },
+    "shelf_capacity": 63,
+    "empty_positions": 4,
+    "stock_percentage": 93.7,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C3_P01_N1_S2_2_JPG.rf.2bfde919b7c8c689d573e09f8f7ffdf1.jpg": {
+    "image_id": 12002,
+    "filename": "C3_P01_N1_S2_2_JPG.rf.2bfde919b7c8c689d573e09f8f7ffdf1.jpg",
+    "split": "val",
+    "session_id": "C3",
+    "shelf_id": "P01",
+    "width": 640,
+    "height": 640,
+    "total_units": 17,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 17
+    },
+    "shelf_capacity": 21,
+    "empty_positions": 4,
+    "stock_percentage": 81.0,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P01_N1_S3_2_JPG.rf.2a4b6986fbf8a837c9fe2b639f688648.jpg": {
+    "image_id": 1003,
+    "filename": "C1_P01_N1_S3_2_JPG.rf.2a4b6986fbf8a837c9fe2b639f688648.jpg",
+    "split": "test",
+    "session_id": "C1",
+    "shelf_id": "P01",
+    "width": 640,
+    "height": 640,
+    "total_units": 15,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 13,
+      "SKU-BEV-PEPSI-CAN-330ML": 2
+    },
+    "shelf_capacity": 19,
+    "empty_positions": 4,
+    "stock_percentage": 78.9,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P01_N2_S2_1_JPG.rf.75fabab5ef6cf89e96239f9b485cf7ae.jpg": {
+    "image_id": 2003,
+    "filename": "C1_P01_N2_S2_1_JPG.rf.75fabab5ef6cf89e96239f9b485cf7ae.jpg",
+    "split": "test",
+    "session_id": "C1",
+    "shelf_id": "P01",
+    "width": 640,
+    "height": 640,
+    "total_units": 10,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 8,
+      "SKU-BEV-PEPSI-CAN-330ML": 2
+    },
+    "shelf_capacity": 18,
+    "empty_positions": 8,
+    "stock_percentage": 55.6,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P01_N2_S3_1_JPG.rf.baa15acde818a3eb563fa854b1cb0c33.jpg": {
+    "image_id": 3003,
+    "filename": "C1_P01_N2_S3_1_JPG.rf.baa15acde818a3eb563fa854b1cb0c33.jpg",
+    "split": "test",
+    "session_id": "C1",
+    "shelf_id": "P01",
+    "width": 640,
+    "height": 640,
+    "total_units": 15,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 10,
+      "SKU-BEV-PEPSI-CAN-330ML": 2,
+      "SKU-SNACK-LAYS-CHIPS-150G": 3
+    },
+    "shelf_capacity": 19,
+    "empty_positions": 4,
+    "stock_percentage": 78.9,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P02_N4_S2_1_JPG.rf.bde873c78e08eab384d6ad9d9f07027f.jpg": {
+    "image_id": 4003,
+    "filename": "C1_P02_N4_S2_1_JPG.rf.bde873c78e08eab384d6ad9d9f07027f.jpg",
+    "split": "test",
+    "session_id": "C1",
+    "shelf_id": "P02",
+    "width": 640,
+    "height": 640,
+    "total_units": 18,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 18
+    },
+    "shelf_capacity": 22,
+    "empty_positions": 4,
+    "stock_percentage": 81.8,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P03_N1_S2_2_JPG.rf.b58aa4bf7795cbdd723997397d69e419.jpg": {
+    "image_id": 5003,
+    "filename": "C1_P03_N1_S2_2_JPG.rf.b58aa4bf7795cbdd723997397d69e419.jpg",
+    "split": "test",
+    "session_id": "C1",
+    "shelf_id": "P03",
+    "width": 640,
+    "height": 640,
+    "total_units": 30,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 21,
+      "SKU-COND-HELLMANNS-MAYO-400G": 9
+    },
+    "shelf_capacity": 34,
+    "empty_positions": 4,
+    "stock_percentage": 88.2,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P03_N1_S3_1_JPG.rf.0af8994324c95f72a699e70ec2efe719.jpg": {
+    "image_id": 6003,
+    "filename": "C1_P03_N1_S3_1_JPG.rf.0af8994324c95f72a699e70ec2efe719.jpg",
+    "split": "test",
+    "session_id": "C1",
+    "shelf_id": "P03",
+    "width": 640,
+    "height": 640,
+    "total_units": 45,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 33,
+      "SKU-BEV-EVIAN-WATER-500ML": 3,
+      "SKU-COND-HELLMANNS-MAYO-400G": 9
+    },
+    "shelf_capacity": 49,
+    "empty_positions": 4,
+    "stock_percentage": 91.8,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P03_N2_S2_1_JPG.rf.db798f003ca3fe912370c3dbf54c199d.jpg": {
+    "image_id": 7003,
+    "filename": "C1_P03_N2_S2_1_JPG.rf.db798f003ca3fe912370c3dbf54c199d.jpg",
+    "split": "test",
+    "session_id": "C1",
+    "shelf_id": "P03",
+    "width": 640,
+    "height": 640,
+    "total_units": 28,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 25,
+      "SKU-BEV-PEPSI-CAN-330ML": 3
+    },
+    "shelf_capacity": 32,
+    "empty_positions": 4,
+    "stock_percentage": 87.5,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P03_N3_S2_1_JPG.rf.5df0df92c7018ab1423ff180c547db44.jpg": {
+    "image_id": 8003,
+    "filename": "C1_P03_N3_S2_1_JPG.rf.5df0df92c7018ab1423ff180c547db44.jpg",
+    "split": "test",
+    "session_id": "C1",
+    "shelf_id": "P03",
+    "width": 640,
+    "height": 640,
+    "total_units": 30,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 20,
+      "SKU-BEV-EVIAN-WATER-500ML": 3,
+      "SKU-COND-HEINZ-KETCHUP-500G": 7
+    },
+    "shelf_capacity": 34,
+    "empty_positions": 4,
+    "stock_percentage": 88.2,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P04_N1_S5_2_JPG.rf.26630e4a2d2e8d7a84a4f6c4018fe343.jpg": {
+    "image_id": 9003,
+    "filename": "C1_P04_N1_S5_2_JPG.rf.26630e4a2d2e8d7a84a4f6c4018fe343.jpg",
+    "split": "test",
+    "session_id": "C1",
+    "shelf_id": "P04",
+    "width": 640,
+    "height": 640,
+    "total_units": 82,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 70,
+      "SKU-BEV-PEPSI-CAN-330ML": 5,
+      "SKU-SNACK-LAYS-CHIPS-150G": 4,
+      "SKU-BEV-RED-BULL-CAN-250ML": 3
+    },
+    "shelf_capacity": 86,
+    "empty_positions": 4,
+    "stock_percentage": 95.3,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P06_N1_S5_1_JPG.rf.222fdf20a72f045e8e63d1877d759980.jpg": {
+    "image_id": 10003,
+    "filename": "C1_P06_N1_S5_1_JPG.rf.222fdf20a72f045e8e63d1877d759980.jpg",
+    "split": "test",
+    "session_id": "C1",
+    "shelf_id": "P06",
+    "width": 640,
+    "height": 640,
+    "total_units": 62,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 43,
+      "SKU-BEV-HEINEKEN-BOTTLE-330ML": 16,
+      "SKU-SNACK-PRINGLES-CAN-165G": 1,
+      "SKU-CEREAL-KELLOGGS-BOX-375G": 2
+    },
+    "shelf_capacity": 66,
+    "empty_positions": 4,
+    "stock_percentage": 93.9,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P06_N2_S3_2_JPG.rf.aa5fc73bb1d63bda0f3e13454639713c.jpg": {
+    "image_id": 11003,
+    "filename": "C1_P06_N2_S3_2_JPG.rf.aa5fc73bb1d63bda0f3e13454639713c.jpg",
+    "split": "test",
+    "session_id": "C1",
+    "shelf_id": "P06",
+    "width": 640,
+    "height": 640,
+    "total_units": 37,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 28,
+      "SKU-BEV-HEINEKEN-BOTTLE-330ML": 6,
+      "SKU-SNACK-PRINGLES-CAN-165G": 1,
+      "SKU-CEREAL-KELLOGGS-BOX-375G": 2
+    },
+    "shelf_capacity": 41,
+    "empty_positions": 4,
+    "stock_percentage": 90.2,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  },
+  "C1_P07_N1_S3_2_JPG.rf.ef21b70ca8ba94b9c5fa9a0e1341866e.jpg": {
+    "image_id": 12003,
+    "filename": "C1_P07_N1_S3_2_JPG.rf.ef21b70ca8ba94b9c5fa9a0e1341866e.jpg",
+    "split": "test",
+    "session_id": "C1",
+    "shelf_id": "P07",
+    "width": 640,
+    "height": 640,
+    "total_units": 30,
+    "by_sku": {
+      "SKU-BEV-COCA-COLA-CAN-330ML": 19,
+      "SKU-BEV-HEINEKEN-BOTTLE-330ML": 11
+    },
+    "shelf_capacity": 34,
+    "empty_positions": 4,
+    "stock_percentage": 88.2,
+    "is_low_stock": false,
+    "is_out_of_stock": false
+  }
+}
